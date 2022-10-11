@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">VirginMoneyChallengeAndroid</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="office_spaces">Work Spaces</string>
+    <string name="contact_details">Contact Details</string>
 </resources>

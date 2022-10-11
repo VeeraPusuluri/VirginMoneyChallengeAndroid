@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/vm_nav_menu">
+
+    <fragment
+        android:id="@+id/employeeDetailsFragment"
+        android:name="com.example.virginmoneychallengeandroid.EmployeeDetailsFragment"
+        android:label="EmployeeDetailsFragment" />
+    <fragment
+        android:id="@+id/officeSpacesFragment"
+        android:name="com.example.virginmoneychallengeandroid.WorkSpacesFragment"
+        android:label="OfficeSpacesFragment" />
+</navigation>
