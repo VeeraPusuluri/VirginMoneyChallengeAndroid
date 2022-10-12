@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="employee"
+            type="com.example.virginmoneychallengeandroid.data.remote.EmployeeDetails" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="20dp"
+        app:cardCornerRadius="15dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/avatar_employee_img"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:padding="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:setAvatarForEmployee="@{employee.avatar}"/>
+
+            <TextView
+                android:id="@+id/id_employee_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="@{employee.id}"
+                app:layout_constraintStart_toEndOf="@+id/avatar_employee_img"
+                app:layout_constraintTop_toTopOf="@+id/avatar_employee_img" />
+
+            <TextView
+                android:id="@+id/name_employee_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="@{employee.firstName+' '+employee.lastName}"
+                app:layout_constraintStart_toEndOf="@id/avatar_employee_img"
+                app:layout_constraintTop_toBottomOf="@+id/id_employee_tv" />
+
+            <TextView
+                android:id="@+id/title_employee_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="@{employee.jobTitle}"
+                app:layout_constraintStart_toEndOf="@id/avatar_employee_img"
+                app:layout_constraintTop_toBottomOf="@+id/name_employee_tv" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>
