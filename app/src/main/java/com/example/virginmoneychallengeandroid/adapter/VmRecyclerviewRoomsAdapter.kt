@@ -1,24 +1,22 @@
 package com.example.virginmoneychallengeandroid.adapter
 
-import android.util.Log
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.virginmoneychallengeandroid.data.remote.WorlSpaceDetails
-import com.example.virginmoneychallengeandroid.databinding.LayoutEmployeeDetailsItemBinding
+import com.example.virginmoneychallengeandroid.R
+import com.example.virginmoneychallengeandroid.data.WorlSpaceDetails
 import com.example.virginmoneychallengeandroid.databinding.LayoutWorkSpacesItemBinding
 
 
 class VmRecyclerviewRoomsAdapter(val Spaces:(WorlSpaceDetails) -> Unit ): ListAdapter<WorlSpaceDetails, VmRecyclerviewRoomsAdapter.VmRecyclerviewRoomsAdapterViewHolder>(diffUtil) {
 
     class VmRecyclerviewRoomsAdapterViewHolder(val view: LayoutWorkSpacesItemBinding) : RecyclerView.ViewHolder(view.root) {
-        fun bind(data:WorlSpaceDetails){
-            view.workspace = data
-            view.maxOccupancyTv.text = data.maxOccupancy.toString()
-            view.occupiedWorkspacesTv.text = data.isOccupied.toString()
+        fun bind(data: WorlSpaceDetails){
+            view.idWorkspacesTv.text =view.root.context.getString(R.string.id, data.id)
+            view.maxOccupancyTv.text = view.root.context.getString(R.string.max_occupency,data.maxOccupancy.toString())
+            view.occupiedWorkspacesTv.text = view.root.context.getString(R.string.occupied,data.isOccupied.toString())
         }
     }
 

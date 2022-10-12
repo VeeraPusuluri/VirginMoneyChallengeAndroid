@@ -5,14 +5,16 @@
     <data>
         <variable
             name="employee"
-            type="com.example.virginmoneychallengeandroid.data.remote.EmployeeDetails" />
+            type="com.example.virginmoneychallengeandroid.data.EmployeeDetails" />
     </data>
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:elevation="20dp"
-        app:cardCornerRadius="15dp">
+        android:layout_margin="16dp"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="8dp"
+        app:strokeWidth="1dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -22,7 +24,6 @@
                 android:id="@+id/avatar_employee_img"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:padding="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:setAvatarForEmployee="@{employee.avatar}"/>
@@ -31,8 +32,9 @@
                 android:id="@+id/id_employee_tv"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:padding="5dp"
+                android:padding="8dp"
                 android:text="@{employee.id}"
+                android:textAppearance="?attr/textAppearanceHeadline6"
                 app:layout_constraintStart_toEndOf="@+id/avatar_employee_img"
                 app:layout_constraintTop_toTopOf="@+id/avatar_employee_img" />
 
@@ -40,8 +42,9 @@
                 android:id="@+id/name_employee_tv"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:padding="5dp"
+                android:padding="8dp"
                 android:text="@{employee.firstName+' '+employee.lastName}"
+                android:textAppearance="?attr/textAppearanceSubtitle2"
                 app:layout_constraintStart_toEndOf="@id/avatar_employee_img"
                 app:layout_constraintTop_toBottomOf="@+id/id_employee_tv" />
 
@@ -49,8 +52,9 @@
                 android:id="@+id/title_employee_tv"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:padding="5dp"
+                android:padding="8dp"
                 android:text="@{employee.jobTitle}"
+                android:textAppearance="?attr/textAppearanceSubtitle2"
                 app:layout_constraintStart_toEndOf="@id/avatar_employee_img"
                 app:layout_constraintTop_toBottomOf="@+id/name_employee_tv" />
 

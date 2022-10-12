@@ -4,4 +4,11 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="office_spaces">Work Spaces</string>
     <string name="contact_details">Contact Details</string>
+    <string name="id">ID: %1$s </string>
+    <string name="occupied">IsOccupied: %1$s </string>
+    <string name="max_occupency">MaxOccupancy: %1$s </string>
+    <string name="name">Name: %1$s  %2$s</string>
+    <string name="email">Email: %1$s</string>
+    <string name="favouritecolor">FavouriteColour: %1$s</string>
+    <string name="jobtitle">JobTitle: %1$s</string>
 </resources>

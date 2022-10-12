@@ -5,19 +5,19 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.virginmoneychallengeandroid.data.remote.EmployeeDetails
-import com.example.virginmoneychallengeandroid.databinding.LayoutEmployeeDetailsItemBinding
+import com.example.virginmoneychallengeandroid.data.EmployeeDetails
+import com.example.virginmoneychallengeandroid.databinding.LayoutEmployeeItemBinding
 
 class VmRecyclerviewEmployeesAdapter(val Employee:(EmployeeDetails) -> Any ) : ListAdapter<EmployeeDetails, VmRecyclerviewEmployeesAdapter.VmRecyclerviewAdapterViewHolder>(diffUtil) {
 
-    class VmRecyclerviewAdapterViewHolder(val view: LayoutEmployeeDetailsItemBinding) : RecyclerView.ViewHolder(view.root) {
-        fun bind(data:EmployeeDetails){
+    class VmRecyclerviewAdapterViewHolder(val view: LayoutEmployeeItemBinding) : RecyclerView.ViewHolder(view.root) {
+        fun bind(data: EmployeeDetails){
             view.employee = data
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VmRecyclerviewAdapterViewHolder {
-        return VmRecyclerviewAdapterViewHolder(LayoutEmployeeDetailsItemBinding.inflate(LayoutInflater.from(parent.context),parent,false))
+        return VmRecyclerviewAdapterViewHolder(LayoutEmployeeItemBinding.inflate(LayoutInflater.from(parent.context),parent,false))
     }
 
     override fun onBindViewHolder(holder: VmRecyclerviewAdapterViewHolder, position: Int) {

@@ -1,4 +1,4 @@
-package com.example.virginmoneychallengeandroid.data.remote
+package com.example.virginmoneychallengeandroid.data
 
 import com.squareup.moshi.Json
 

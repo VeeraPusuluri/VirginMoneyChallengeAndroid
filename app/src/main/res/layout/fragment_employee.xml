@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.slidingpanelayout.widget.SlidingPaneLayout
+        android:id="@+id/slidingpanelayout_employe"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context = ".EmployeeFragment">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview_employees"
+            android:layout_width="550dp"
+            android:layout_height="match_parent"
+            android:clipToPadding="true"
+            android:padding="8dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/layout_employee_item" />
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fcv_employee"
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:name="com.example.virginmoneychallengeandroid.EmployeeDetailsfragment"/>
+
+    </androidx.slidingpanelayout.widget.SlidingPaneLayout>
+
+</layout>

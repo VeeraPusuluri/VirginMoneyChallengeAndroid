@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/vm_nav_menu">
-
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/vm_nav_menu"
+    app:startDestination="@id/employeeFragment">
     <fragment
-        android:id="@+id/employeeDetailsFragment"
-        android:name="com.example.virginmoneychallengeandroid.EmployeeDetailsFragment"
-        android:label="EmployeeDetailsFragment" />
+        android:id="@+id/employeeFragment"
+        android:name="com.example.virginmoneychallengeandroid.EmployeeFragment"
+        android:label="EmployeeFragment" >
+        <action
+            android:id="@+id/action_employeeFragment_to_employeeDetailsfragment"
+            app:destination="@id/employeeDetailsfragment" />
+    </fragment>
     <fragment
-        android:id="@+id/officeSpacesFragment"
-        android:name="com.example.virginmoneychallengeandroid.WorkSpacesFragment"
-        android:label="OfficeSpacesFragment" />
+        android:id="@+id/employeeDetailsfragment"
+        android:name="com.example.virginmoneychallengeandroid.EmployeeDetailsfragment"
+        android:label="fragment_employee_detailsfragment"
+        tools:layout="@layout/fragment_employee_detailsfragment" >
+        <action
+            android:id="@+id/action_employeeDetailsfragment_to_employeeFragment"
+            app:destination="@id/employeeFragment" />
+    </fragment>
 </navigation>

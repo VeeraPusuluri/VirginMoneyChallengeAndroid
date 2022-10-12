@@ -2,17 +2,13 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <data>
-        <variable
-            name="workspace"
-            type="com.example.virginmoneychallengeandroid.data.remote.WorlSpaceDetails"/>
-    </data>
-
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:elevation="20dp"
-        app:cardCornerRadius="15dp">
+        android:layout_margin="16dp"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="8dp"
+        app:strokeWidth="1dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -26,7 +22,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                android:text="@{workspace.id}"/>
+                android:textAppearance="?attr/textAppearanceHeadline6" />
 
             <TextView
                 android:id="@+id/occupied_workspaces_tv"
@@ -35,7 +31,8 @@
                 android:padding="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/id_workspaces_tv" />
+                app:layout_constraintTop_toBottomOf="@+id/id_workspaces_tv"
+                android:textAppearance="?attr/textAppearanceSubtitle2"/>
 
             <TextView
                 android:id="@+id/max_occupancy_tv"
@@ -44,7 +41,8 @@
                 android:padding="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/occupied_workspaces_tv" />
+                app:layout_constraintTop_toBottomOf="@+id/occupied_workspaces_tv"
+                android:textAppearance="?attr/textAppearanceSubtitle2"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>

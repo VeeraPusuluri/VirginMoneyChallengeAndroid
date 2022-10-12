@@ -1,9 +1,9 @@
 package com.example.virginmoneychallengeandroid.repository.remote
 
 import android.util.Log
-import com.example.virginmoneychallengeandroid.data.remote.EmployeeDetails
-import com.example.virginmoneychallengeandroid.data.remote.VmApi
-import com.example.virginmoneychallengeandroid.data.remote.WorlSpaceDetails
+import com.example.virginmoneychallengeandroid.data.EmployeeDetails
+import com.example.virginmoneychallengeandroid.data.VmApi
+import com.example.virginmoneychallengeandroid.data.WorlSpaceDetails
 
 private const val TAG = "VmRemoteDataSource"
 

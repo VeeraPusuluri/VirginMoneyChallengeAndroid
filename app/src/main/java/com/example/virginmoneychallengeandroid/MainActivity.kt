@@ -7,6 +7,9 @@ import androidx.activity.viewModels
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.commit
+import androidx.navigation.NavController
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.setupActionBarWithNavController
 import com.example.virginmoneychallengeandroid.databinding.ActivityMainBinding
 import com.example.virginmoneychallengeandroid.viewmodel.VmViewModel
 import com.google.android.material.navigation.NavigationBarView
@@ -15,6 +18,7 @@ class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
 
     private var _binding: ActivityMainBinding? = null
     private val binding get() = _binding!!
+    private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,6 +26,13 @@ class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
         setContentView(binding.root)
         binding.bnvMainActivity.setOnItemSelectedListener(this)
 
+        val navHostFragment = supportFragmentManager.findFragmentById(R.id.fcv_main_activity) as NavHostFragment
+        navController = navHostFragment.navController
+        setupActionBarWithNavController(navController)
+    }
+
+    override fun onNavigateUp(): Boolean {
+        return super.onNavigateUp()
     }
 
     override fun onDestroy() {
@@ -33,7 +44,7 @@ class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
         return when (item.itemId) {
             R.id.contact_details -> {
                 supportFragmentManager.commit {
-                    replace(R.id.fcv_main_activity,EmployeeDetailsFragment())
+                    replace(R.id.fcv_main_activity,EmployeeFragment())
                     addToBackStack("employee")
                 }
                 true

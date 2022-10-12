@@ -1,7 +1,7 @@
 package com.example.virginmoneychallengeandroid.repository
 
-import com.example.virginmoneychallengeandroid.data.remote.EmployeeDetails
-import com.example.virginmoneychallengeandroid.data.remote.WorlSpaceDetails
+import com.example.virginmoneychallengeandroid.data.EmployeeDetails
+import com.example.virginmoneychallengeandroid.data.WorlSpaceDetails
 import com.example.virginmoneychallengeandroid.repository.remote.VmRemoteDataSource
 
 class VmRepository(){
