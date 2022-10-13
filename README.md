@@ -9,6 +9,7 @@ All employees will have access to the app and have the ability to quickly pull u
 This app uses MVVM architecture to fetch employee and work spaces data from server with retrofit and moshi and displays data as list in application.
 
 
-![Screenshot_20221012_224516](https://user-images.githubusercontent.com/107999355/195602486-2db03bf8-e5b0-4e25-bd7a-1863b06d94d5.png)
-![Screenshot_20221012_224624](https://user-images.githubusercontent.com/107999355/195602507-bc27d3a7-b442-48ef-baeb-5bcf488af04f.png)
-![Screenshot_20221012_224635](https://user-images.githubusercontent.com/107999355/195602531-2c4f18c6-46a7-47cb-ac63-9f9272262ae8.png)
+![Screenshot_20221013_142508](https://user-images.githubusercontent.com/107999355/195609201-d1dbfe58-e7cb-4020-8158-a96e35888453.png)
+![Screenshot_20221013_142535](https://user-images.githubusercontent.com/107999355/195609238-014e562d-7cbe-4c34-9c69-69e136564b83.png)
+![Screenshot_20221013_142542](https://user-images.githubusercontent.com/107999355/195609260-d8cfc92f-bb2d-440c-a59a-d4d588372f7f.png)
+
