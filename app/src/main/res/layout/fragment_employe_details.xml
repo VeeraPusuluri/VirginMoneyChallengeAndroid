@@ -21,6 +21,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:scaleType="fitStart"
+                android:contentDescription="@string/user_profile_photo"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"/>
@@ -33,6 +34,7 @@
                 app:layout_constraintStart_toStartOf="@+id/avatar_employe_img"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:padding="8dp"
+                android:hint="@string/employee_id"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"/>
 
             <TextView
@@ -43,6 +45,7 @@
                 app:layout_constraintStart_toStartOf="@id/id_employe_tv"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:padding="8dp"
+                android:hint="@string/employee_name"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"/>
 
             <TextView
@@ -53,6 +56,7 @@
                 app:layout_constraintStart_toStartOf="@id/id_employe_tv"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:padding="8dp"
+                android:hint="@string/employee_job_position"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"/>
 
             <TextView
@@ -63,6 +67,7 @@
                 app:layout_constraintStart_toStartOf="@id/id_employe_tv"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:padding="8dp"
+                android:hint="@string/employee_email"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"/>
 
             <TextView
@@ -73,6 +78,7 @@
                 app:layout_constraintStart_toStartOf="@id/id_employe_tv"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:padding="8dp"
+                android:hint="@string/employee_favourite_color"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>

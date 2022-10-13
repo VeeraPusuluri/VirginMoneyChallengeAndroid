@@ -26,6 +26,7 @@
                 android:layout_height="150dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
+                android:contentDescription="@string/user_profile_photo"
                 app:setAvatarForEmployee="@{employee.avatar}"/>
 
             <TextView
@@ -34,6 +35,7 @@
                 android:layout_height="wrap_content"
                 android:padding="8dp"
                 android:text="@{employee.id}"
+                android:hint="@string/employee_id"
                 android:textAppearance="?attr/textAppearanceHeadline6"
                 app:layout_constraintStart_toEndOf="@+id/avatar_employee_img"
                 app:layout_constraintTop_toTopOf="@+id/avatar_employee_img" />
@@ -44,6 +46,7 @@
                 android:layout_height="wrap_content"
                 android:padding="8dp"
                 android:text="@{employee.firstName+' '+employee.lastName}"
+                android:hint="@string/employee_name"
                 android:textAppearance="?attr/textAppearanceSubtitle2"
                 app:layout_constraintStart_toEndOf="@id/avatar_employee_img"
                 app:layout_constraintTop_toBottomOf="@+id/id_employee_tv" />
@@ -54,6 +57,7 @@
                 android:layout_height="wrap_content"
                 android:padding="8dp"
                 android:text="@{employee.jobTitle}"
+                android:hint="@string/employee_job_position"
                 android:textAppearance="?attr/textAppearanceSubtitle2"
                 app:layout_constraintStart_toEndOf="@id/avatar_employee_img"
                 app:layout_constraintTop_toBottomOf="@+id/name_employee_tv" />

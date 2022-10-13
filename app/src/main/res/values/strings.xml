@@ -11,4 +11,13 @@
     <string name="email">Email: %1$s</string>
     <string name="favouritecolor">FavouriteColour: %1$s</string>
     <string name="jobtitle">JobTitle: %1$s</string>
+    <string name="user_profile_photo">User Profile Photo</string>
+    <string name="employee_id">Employee id</string>
+    <string name="employee_name">Employee name</string>
+    <string name="employee_job_position">Employee Job Position</string>
+    <string name="work_space_id">WorkSpace Id</string>
+    <string name="workspace_occupied">WorkSpace Occupied</string>
+    <string name="workspace_max_occupancy">WorkSpace Max Occupancy</string>
+    <string name="employee_email">Employee Email</string>
+    <string name="employee_favourite_color">Employee Favourite Color</string>
 </resources>
