@@ -22,7 +22,7 @@ class EmployeeFragment : Fragment() {
     private var _binding: FragmentEmployeeBinding? = null
     private val binding get() = _binding!!
     private lateinit var recyclerview:RecyclerView
-    private lateinit var slidingPaneLayout: SlidingPaneLayout
+    private lateinit var slidingpaneLayout: SlidingPaneLayout
     private lateinit var adapter:VmRecyclerviewEmployeesAdapter
 
     private val viewModel: VmViewModel by activityViewModels {
@@ -36,22 +36,35 @@ class EmployeeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        activity?.title = "Employees"
         binding.apply {
             lifecycleOwner = viewLifecycleOwner
             recyclerview = recyclerviewEmployees
-            slidingPaneLayout = slidingpanelayoutEmploye
+            slidingpaneLayout = slidingpanelayoutEmploye
         }
-        slidingPaneLayout.lockMode = SlidingPaneLayout.LOCK_MODE_LOCKED
-        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner,VmOnBackPressedCallback(slidingPaneLayout))
 
-        val adapter = VmRecyclerviewEmployeesAdapter{
+        attachSidingPaneLayout()
+        observeEmployeeData()
+    }
+
+    private fun attachSidingPaneLayout() {
+        slidingpaneLayout.lockMode = SlidingPaneLayout.LOCK_MODE_LOCKED
+        // Connect the SlidingPaneLayout to the system back button.
+        requireActivity().onBackPressedDispatcher.addCallback(
+            viewLifecycleOwner,
+            VmOnBackPressedCallback(slidingpaneLayout)
+        )
+
+    }
+
+    private fun observeEmployeeData() {
+        val adapter = VmRecyclerviewEmployeesAdapter {
             viewModel.setCurrentEmployeeData(it)
-            slidingPaneLayout.openPane()
+            slidingpaneLayout.openPane()
         }
-
         viewModel.getEmployeeDetails()
         activity?.lifecycleScope?.launch {
-            viewModel.employeeDetails.observe(requireActivity()){
+            viewModel.employeeDetails.observe(requireActivity()) {
                 recyclerview.layoutManager = LinearLayoutManager(requireContext())
                 recyclerview.adapter = adapter
                 adapter.submitList(it)

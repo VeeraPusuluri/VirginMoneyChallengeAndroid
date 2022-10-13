@@ -3,20 +3,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/vm_nav_menu"
+    android:label="Employee Details"
     app:startDestination="@id/employeeFragment">
     <fragment
         android:id="@+id/employeeFragment"
         android:name="com.example.virginmoneychallengeandroid.EmployeeFragment"
-        android:label="EmployeeFragment" >
+        android:label="@string/employees">
         <action
             android:id="@+id/action_employeeFragment_to_employeeDetailsfragment"
             app:destination="@id/employeeDetailsfragment" />
     </fragment>
     <fragment
         android:id="@+id/employeeDetailsfragment"
-        android:name="com.example.virginmoneychallengeandroid.fragments.EmployeeDetailsfragment"
-        android:label="fragment_employee_detailsfragment"
-        tools:layout="@layout/fragment_employee_detailsfragment" >
+        android:name="com.example.virginmoneychallengeandroid.fragments.EmployeDetailsFragment"
+        android:label="@string/details"
+        tools:layout="@layout/fragment_employe_details">
         <action
             android:id="@+id/action_employeeDetailsfragment_to_employeeFragment"
             app:destination="@id/employeeFragment" />

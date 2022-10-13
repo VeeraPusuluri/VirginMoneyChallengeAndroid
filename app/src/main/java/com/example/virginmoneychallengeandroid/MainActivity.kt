@@ -23,14 +23,9 @@ class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
         setContentView(binding.root)
         binding.bnvMainActivity.setOnItemSelectedListener(this)
 
-        val navHostFragment = supportFragmentManager.findFragmentById(R.id.fcv_main_activity) as NavHostFragment
-        navController = navHostFragment.navController
-        setupActionBarWithNavController(navController)
     }
 
-    override fun onNavigateUp(): Boolean {
-        return super.onNavigateUp()
-    }
+
 
     override fun onDestroy() {
         super.onDestroy()
