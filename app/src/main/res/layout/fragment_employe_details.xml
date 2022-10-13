@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="16dp"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="8dp"
+        app:strokeWidth="1dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".fragments.EmployeDetailsFragment">
+
+            <ImageView
+                android:id="@+id/avatar_employe_img"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:scaleType="fitStart"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/id_employe_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/avatar_employe_img"
+                app:layout_constraintStart_toStartOf="@+id/avatar_employe_img"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:padding="8dp"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"/>
+
+            <TextView
+                android:id="@+id/name_employe_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/id_employe_tv"
+                app:layout_constraintStart_toStartOf="@id/id_employe_tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:padding="8dp"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"/>
+
+            <TextView
+                android:id="@+id/role_employe_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/name_employe_tv"
+                app:layout_constraintStart_toStartOf="@id/id_employe_tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:padding="8dp"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"/>
+
+            <TextView
+                android:id="@+id/email_employe_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/role_employe_tv"
+                app:layout_constraintStart_toStartOf="@id/id_employe_tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:padding="8dp"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"/>
+
+            <TextView
+                android:id="@+id/color_employe_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/email_employe_tv"
+                app:layout_constraintStart_toStartOf="@id/id_employe_tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:padding="8dp"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

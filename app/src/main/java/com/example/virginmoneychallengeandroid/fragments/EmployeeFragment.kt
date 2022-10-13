@@ -14,7 +14,6 @@ import androidx.slidingpanelayout.widget.SlidingPaneLayout
 import com.example.virginmoneychallengeandroid.adapter.VmRecyclerviewEmployeesAdapter
 import com.example.virginmoneychallengeandroid.databinding.FragmentEmployeeBinding
 import com.example.virginmoneychallengeandroid.viewmodel.VmViewModel
-import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import kotlinx.coroutines.launch
 
 private  const val TAG = "EmployeeDetailsFragment"
@@ -66,6 +65,7 @@ class EmployeeFragment : Fragment() {
     }
 }
 
+//sliding pane layout listener that displays employee details in new fragment
 class VmOnBackPressedCallback(private val slidingPaneLayout: SlidingPaneLayout) : OnBackPressedCallback(slidingPaneLayout.isSlideable && slidingPaneLayout.isOpen),SlidingPaneLayout.PanelSlideListener {
     init {
         slidingPaneLayout.addPanelSlideListener(this)

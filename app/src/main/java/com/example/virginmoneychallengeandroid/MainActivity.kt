@@ -3,15 +3,12 @@ package com.example.virginmoneychallengeandroid
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
-import androidx.activity.viewModels
-import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.commit
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupActionBarWithNavController
 import com.example.virginmoneychallengeandroid.databinding.ActivityMainBinding
-import com.example.virginmoneychallengeandroid.viewmodel.VmViewModel
+import com.example.virginmoneychallengeandroid.fragments.WorkSpacesFragment
 import com.google.android.material.navigation.NavigationBarView
 
 class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListener {

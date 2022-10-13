@@ -8,10 +8,12 @@ class VmRepository(){
 
     private  val remoteDataSOurce = VmRemoteDataSource()
 
+    // fetches employee details from remote server
     suspend fun getEmployeeDetails():List<EmployeeDetails>{
        return remoteDataSOurce.getEmployeeDetailsFromRemote()
     }
 
+    // fetches work space details from remote server
     suspend fun getSpacesDetails():List<WorlSpaceDetails>{
         return remoteDataSOurce.getWorkSpacesFromRemote()
     }

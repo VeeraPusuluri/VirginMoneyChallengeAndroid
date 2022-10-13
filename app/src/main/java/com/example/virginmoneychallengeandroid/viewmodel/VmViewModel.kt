@@ -19,18 +19,21 @@ class VmViewModel : ViewModel() {
     val currentEmployee:LiveData<EmployeeDetails> get() = _currentEmployee
 
 
+    // to fetch employee details from repository
     fun getEmployeeDetails() {
         viewModelScope.launch {
             _employeeDetails.value = VmRepositoryInstance.getEmployeeDetails()
         }
     }
 
+    // to fetch work space details from repository
     fun getWorkSpacesDetails() {
         viewModelScope.launch {
             _workSpaces.value = VmRepositoryInstance.getSpacesDetails()
         }
     }
 
+    //sets data for current employee to display in sliding pane layout
     fun setCurrentEmployeeData(data: EmployeeDetails) {
         _currentEmployee.value = data
     }

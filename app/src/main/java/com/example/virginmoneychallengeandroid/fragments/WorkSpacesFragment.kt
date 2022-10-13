@@ -1,4 +1,4 @@
-package com.example.virginmoneychallengeandroid
+package com.example.virginmoneychallengeandroid.fragments
 
 import android.os.Bundle
 import android.util.Log
@@ -12,7 +12,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.virginmoneychallengeandroid.adapter.VmRecyclerviewRoomsAdapter
 import com.example.virginmoneychallengeandroid.databinding.FragmentWorkSpacesBinding
-import com.example.virginmoneychallengeandroid.repository.VmRepository
 import com.example.virginmoneychallengeandroid.viewmodel.VmViewModel
 import kotlinx.coroutines.launch
 

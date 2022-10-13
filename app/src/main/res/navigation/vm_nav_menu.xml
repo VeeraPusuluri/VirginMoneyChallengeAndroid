@@ -14,7 +14,7 @@
     </fragment>
     <fragment
         android:id="@+id/employeeDetailsfragment"
-        android:name="com.example.virginmoneychallengeandroid.EmployeeDetailsfragment"
+        android:name="com.example.virginmoneychallengeandroid.fragments.EmployeeDetailsfragment"
         android:label="fragment_employee_detailsfragment"
         tools:layout="@layout/fragment_employee_detailsfragment" >
         <action
